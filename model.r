@@ -193,7 +193,3 @@ while(valid==F){
 data_prods <- as(prods, "transactions")
 apriori_rules<-apriori(data_prods,parameter = list(supp = min_support/100 , conf = min_conf/100 ,minlen=2))
 inspect(apriori_rules)
-
-
-?apriori
-
