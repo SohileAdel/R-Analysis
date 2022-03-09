@@ -75,7 +75,7 @@ sumTable <- data.frame(
   total_payment = c(sum(Cashes), sum(Credits))
 )
 
-pie( #we realize that cash and credit are equavlent 
+pie( #we realize that cash and credit are equivalent 
   x= sumTable$total_payment,
   labels = sumTable$payment,
   main = "Comparing cash and credit totals",
