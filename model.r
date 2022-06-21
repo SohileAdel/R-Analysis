@@ -75,7 +75,7 @@ sumTable <- data.frame(
   total_payment = c(sum(Cashes), sum(Credits))
 )
 
-pie( #we realize that cash and credit are equivalent 
+pie( #we realize that cash and credit are equavlent 
   x= sumTable$total_payment,
   labels = sumTable$payment,
   main = "Comparing cash and credit totals",
@@ -167,7 +167,7 @@ print(DB)
 
 valid <- F
 while(valid==F){
-  min_support <-as.numeric(readline(prompt = "Enter the minimum support (note:the minimum support must be between[1 and 100]%): "))
+  min_support <-as.numeric(readline(prompt = "Enter the minimum support(note:the minimum support must be between[1 and 100]%): "))
   if(min_support < 1){
     print("Minimum Support can't be less than 1%")
   }else if(min_support>100){
@@ -180,7 +180,7 @@ while(valid==F){
 
 valid<-F
 while(valid==F){
-  min_conf <-as.numeric(readline(prompt = "Enter the minimum confidence (note:the minimum support must be between[1 and 100]%): "))
+  min_conf <-as.numeric(readline(prompt = "Enter the minimum confidencenote:the minimum support must be between[1 and 100]%): "))
   if(min_conf<1){
     print("Minimum Confidence can't be less than 1%")
   } else if(min_conf>100){
@@ -193,3 +193,7 @@ while(valid==F){
 data_prods <- as(prods, "transactions")
 apriori_rules<-apriori(data_prods,parameter = list(supp = min_support/100 , conf = min_conf/100 ,minlen=2))
 inspect(apriori_rules)
+
+
+?apriori
+
